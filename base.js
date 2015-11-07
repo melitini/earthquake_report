@@ -1,5 +1,4 @@
 
-var monthly_quakes_endpoint = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
 
 var map;
 
