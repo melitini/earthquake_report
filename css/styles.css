@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-size: 100%;
-  background-image: url("../images/blur.jpg");
+  background-image: url("/../images/blur.jpg");
   background-repeat: no-repeat;
   color: white;
 }
@@ -47,7 +47,6 @@ p {
 
 p span {
   padding: 5px;
-/*  background-image: url("http://1x1px.me/NFFFFFF-0.3.png");*/
   color: red;
   text-shadow: 1px 2px 2px #000000;
   font-size: 33px;
