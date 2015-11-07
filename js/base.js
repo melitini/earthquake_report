@@ -1,5 +1,5 @@
 
-var weekly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+var monthly_quakes_endpoint = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
 
 var map;
 
@@ -14,7 +14,7 @@ $(document).ready(function(){
 	  });
 
 
-	$.get(weekly_quakes_endpoint, function(data) {
+	$.get(monthly_quakes_endpoint, function(data) {
 		var features = data.features;
 
 		features.forEach(function(element) {
