@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-		  <title>Quake Watch</title>
+<head>
+	<meta charset="utf-8">
+	  <title>Weekly Quakes</title>
 
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/styles.css">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
 
     <!-- VENDOR JS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
 
     <!-- APPLICATION JS -->
     <script src="base.js"></script>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300|Poiret+One' rel='stylesheet' type='text/css'>
+
 	</head>
 	<body>
-    <div id="map" class="column"></div>
-    <div id="info" class="column">
-      <h1>Earthquakes from the past week:</h1>
-      <!-- <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p> -->
+    <div id="map" class="column">
     </div>
+    <div class="column">
+      <h1>Earthquake Report</h1>
+        <div class="overlay" style="overflow-y:scroll;" id="info">
+        </div>
+    </div>
+
 	</body>
 </html>

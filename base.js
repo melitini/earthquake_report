@@ -6,51 +6,50 @@ var map;
 
 $(document).ready(function(){
  
- //Show me the map!
+ //Show me the map
+ 	var myLatLng = {lat: 10.78, lng: -30};
 	 map = new google.maps.Map(document.getElementById('map'), {
-	    center: {lat: 37.78, lng: -122.44},
-	    zoom: 8
+	    center: myLatLng,
+	    zoom: 2
 	  });
 
- //Show me the title
+
 	$.get(weekly_quakes_endpoint, function(data) {
-		var location = data.features;
-		location.forEach(function(element) {
+		var features = data.features;
+
+		features.forEach(function(element) {
+			//Show me the title
 			var title = element.properties.title;
-			$("#info").append("<p>" + title + "</p>");
-		});
-	});
 
+			// show me the date when it happened
+			var time = element.properties.time;
+			var date = new Date(time);
 
+			// show me the magnitude 
+			var mag = element.properties.mag;
 
+			// show me the location
+			var location = element.properties.place;
 
- //Show me the coordinates
- 	$.get(weekly_quakes_endpoint, function(data) {
- 		var narrowFeatures = data.features;
-
- 		narrowFeatures.forEach(function(element) {
+			// append data to html
+			$("#info").append("<p><span>" + mag + "</span>" + " quake on " + date , "<p class='loc'>" + location + "</p><hr>");
+ 		
+			//Show me the coordinates
  			var narrowGeo = element.geometry;
  			var narrowCoo = narrowGeo["coordinates"];
- 			var lon = narrowCoo[0];
- 			var lat = narrowCoo[1];
+ 			var coordinates = {lat: narrowCoo[1], lng: narrowCoo[0]};
  		 			
- 			// show me the first coordinates in the map as a marker
-
- 			new google.maps.Marker({
- 				position: new google.maps.LatLng(lat, lon),
- 				map: map,
- 				title: "Earthquakes!"
- 			})
-
-			});
-
+			// assign markers to coordinates
+			var marker = new google.maps.Marker({
+			  position: coordinates,
+			  map: map,
+			  title: title
+			}); 
+			//render the marker
+			marker.setMap(map);
+		});
 	});
-
-
 });
-
-
-
 
 
 /*

@@ -1,7 +1,9 @@
 body {
-  color: #333;
   font-family: Helvetica, Arial, sans-serif;
-  background-color: #FAFCFD;
+  background-size: 100%;
+  background-image: url("http://i.imgur.com/z2ubnw4.jpg");
+  background-repeat: no-repeat;
+  color: white;
 }
 
 html, body, #map {
@@ -17,13 +19,43 @@ html, body, #map {
 }
 
 h1 {
-  font-size: 30px;
+  font-family: 'Poiret One', cursive;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 40px;
   margin-bottom: 10px;
+  text-align: center;
+}
+.overlay {
+  margin-right: 5%;
+  background-image: url("http://1x1px.me/NFFFFFF-0.3.png");
+  border-radius: 0.5%;
+  border: 1px solid white;
+  padding: 20px;
+  float: right;
+  width: 80%;
+  overflow-y: auto;
+  height: 550px;
 }
 
+
 p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
   padding: 10px 0;
 }
-p + p {
-  border-top: 1px solid black;
+
+p span {
+  padding: 5px;
+/*  background-image: url("http://1x1px.me/NFFFFFF-0.3.png");*/
+  color: red;
+  text-shadow: 1px 2px 2px #000000;
+  font-size: 33px;
+  margin-top: 5%;
+  margin-right: 5%;
 }
+
+.loc {
+  padding-left: 15%;
+  color: #ffe199;
+}
+
