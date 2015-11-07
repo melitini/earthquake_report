@@ -1,5 +1,5 @@
 
-var monthly_quakes_endpoint = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson"
+var monthly_quakes_endpoint = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson";
 
 var map;
 
@@ -13,8 +13,14 @@ $(document).ready(function(){
 	    zoom: 2
 	  });
 
+	 // Create a <script> tag and set the USGS URL as the source.
+	   var script = document.createElement('script');
 
-	$.get(monthly_quakes_endpoint, function(data) {
+	   script.src = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson';
+	    document.getElementsByTagName('head')[0].appendChild(script);
+
+
+	$.get(script, function(data) {
 		var features = data.features;
 
 		features.forEach(function(element) {
