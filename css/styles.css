@@ -39,7 +39,7 @@ h3 {
 }
 
 .overlay {
-  margin-top: 7%;
+  margin-top: 5%;
   margin-right: 5%;
   background-image: url("http://1x1px.me/NFFFFFF-0.3.png");
   border-radius: 0.5%;
@@ -76,3 +76,9 @@ p {
   color: #ffe199;
 }
 
+
+footer {
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none !important;
+  padding: 20px 10px;
+}
