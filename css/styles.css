@@ -79,6 +79,10 @@ p {
 
 footer {
   font-family: 'Josefin Sans', sans-serif;
-  text-decoration: none !important;
   padding: 20px 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffe199 !important;
 }
