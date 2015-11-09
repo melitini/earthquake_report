@@ -26,7 +26,20 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+h3 {
+  color: black;
+}
+
 .overlay {
+  margin-top: 7%;
   margin-right: 5%;
   background-image: url("http://1x1px.me/NFFFFFF-0.3.png");
   border-radius: 0.5%;
@@ -35,17 +48,16 @@ h1 {
   float: right;
   width: 80%;
   overflow-y: auto;
-  height: 550px;
+  height: 450px;
 }
 
 
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
-  padding: 10px 0;
 }
 
-p span {
+.mag {
   padding: 5px;
   color: red;
   text-shadow: 1px 2px 2px #000000;
@@ -54,8 +66,13 @@ p span {
   margin-right: 5%;
 }
 
+.quake-info {
+
+
+}
+
 .loc {
-  padding-left: 15%;
+  padding-left: 16%;
   color: #ffe199;
 }
 
