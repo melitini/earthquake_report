@@ -24,13 +24,18 @@ $(document).ready(function(){
 
 			// show me the date when it happened
 			var time = element.properties.time;
-			var date = new Date(time);
+			//make that date readable 
+			var d = new Date(time);
+			var date = d.toDateString();
 
 			// show me the magnitude 
 			var mag = element.properties.mag;
 
 			// show me the location
-			var location = element.properties.place;
+			var l = element.properties.place;
+			// show only city and country
+			var loc = l.split("of");
+			var location = loc[1];
 
 			// append data to html
 			$("#info").append("<p><span>" + mag + "</span>" + " quake on " + date , "<p class='loc'>" + location + "</p><hr>");
